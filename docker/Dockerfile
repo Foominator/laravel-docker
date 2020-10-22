@@ -2,7 +2,10 @@ FROM php:7.3-fpm
 
 RUN docker-php-ext-install pdo pdo_mysql
 
-RUN apt-get update && apt-get install -y cron
+RUN apt-get update && apt-get install -y \
+    cron \
+    git \
+    zip
 
 # Add crontab file in the cron directory
 ADD docker/crontab /etc/cron.d/cron

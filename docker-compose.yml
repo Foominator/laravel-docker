@@ -51,6 +51,15 @@ services:
     networks:
       - laravel
 
+  #REDIS Service
+  redis:
+    container_name: redis
+    image: redis:6
+    ports:
+      - 16379:6379
+    networks:
+      - laravel
+
 #Docker Networks
 networks:
   laravel:

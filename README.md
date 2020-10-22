@@ -123,6 +123,27 @@ DB_DATABASE=laravel
 DB_USERNAME=laravel_user # change to created user name(previous step)
 DB_PASSWORD=password # change to created user password(previous step)
 ```
+
+## Redis
+<b>/docker-compose.yml</b>  
+```
+  #REDIS Service
+  redis:
+    container_name: redis
+    image: redis:6
+    ports:
+      - 16379:6379
+    networks:
+      - laravel
+```
+- composer require predis/predis
+- Change redis host to container name in <b>.env</b> file
+```
+REDIS_HOST=redis 
+REDIS_PASSWORD=null
+REDIS_PORT=6379
+```
+
 ## Crontab
 #### For laravel schedule
 <b>/docker/Dockerfile</b>  

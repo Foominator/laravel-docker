@@ -105,7 +105,7 @@ DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
 ```
-####After mysql container built and started
+#### After mysql container built and started
 - Connect to DB <b>by port :4306</b> by your mysql client
 - Create and configure mysql user
 ```
